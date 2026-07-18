@@ -1,22 +1,29 @@
 {
-  "generatedAt": "2026-07-18T15:18:23.268Z",
+  "generatedAt": "2026-07-18T16:30:42.912Z",
   "source": "open pull requests on gkwngns714-spec/byeharu",
   "count": 2,
   "items": [
     {
-      "pr": 198,
-      "title": "Pirate danger-zone prototype (0225): PostGIS polygon zones + intercept + waypoints (DARK)",
-      "branch": "slice-pirate-intercept",
-      "stamp": "20260618000233",
+      "pr": 205,
+      "title": "COMBAT SLICE 3: spatial combat — positions, CLOSE-vs-KITE AI, spatial tick (0234, dark)",
+      "branch": "slice-combat-s3-spatial",
+      "stamp": "20260618000234",
       "color": "#ff2d95",
       "touches": {
         "functions": [
-          "command_ship_group_go"
+          "combat_create_group_encounter",
+          "process_combat_ticks",
+          "report_create"
         ],
-        "tables": []
+        "tables": [
+          "combat_units"
+        ]
       },
       "nodes": [
-        "fn:command_ship_group_go"
+        "fn:combat_create_group_encounter",
+        "fn:process_combat_ticks",
+        "fn:report_create",
+        "table:combat_units"
       ]
     },
     {
