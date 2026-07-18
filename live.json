@@ -1,9 +1,10 @@
 {
- "fetchedAt": "2026-07-18T02:27:08.214Z",
+ "fetchedAt": "2026-07-18T02:44:36.954Z",
  "sources": {
   "gameConfig": {
-   "ok": false,
-   "reason": "no VITE_SUPABASE_URL / VITE_SUPABASE_ANON_KEY (looked in C:\\Users\\gkwng\\dev\\byeharu-pmap\\.env.local)"
+   "ok": true,
+   "host": "dlkbwztrdvnnjlvaydut.supabase.co",
+   "rows": 106
   },
   "deploy": {
    "ok": true,
@@ -16,8 +17,38 @@
    }
   }
  },
- "flags": {},
- "configRows": 0,
+ "flags": {
+  "runtime_cleanup_enabled": true,
+  "trade_market_enabled": false,
+  "trade_relief_enabled": false,
+  "mainship_send_enabled": false,
+  "mainship_space_movement_enabled": false,
+  "mainship_coordinate_travel_enabled": false,
+  "exploration_enabled": false,
+  "mining_enabled": false,
+  "captain_assignment_enabled": false,
+  "captain_progression_enabled": false,
+  "ranking_enabled": false,
+  "location_investment_enabled": false,
+  "world_balance_enabled": false,
+  "phase20_polish_enabled": false,
+  "station_storage_enabled": true,
+  "mainship_additional_commission_enabled": true,
+  "team_command_enabled": true,
+  "module_crafting_enabled": true,
+  "module_fitting_enabled": true,
+  "salvage_market_enabled": false,
+  "haul_contracts_enabled": false,
+  "captain_growth_enabled": false,
+  "shipyard_enabled": false,
+  "ship_traits_enabled": false,
+  "repair_economy_enabled": false,
+  "fleet_control_enabled": false,
+  "command_buffs_enabled": false,
+  "launch_from_dock_enabled": true,
+  "fleet_movement_unified_enabled": true
+ },
+ "configRows": 106,
  "deploy": {
   "state": "success",
   "runs": [
