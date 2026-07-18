@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Byeharu — Project Map</title>
+<style>
+  :root {
+    --bg: #07090f;
+    --panel: rgba(14, 18, 30, 0.86);
+    --line: rgba(255, 255, 255, 0.11);
+    --text: #e8ecf5;
+    --dim: #8792ab;
+    --accent: #35c1e0;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
+    font: 13px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; overflow: hidden; }
+  /* touch-action:none — the canvas handles its own drag/pinch, so the browser
+     must not steal the gesture to scroll or page-zoom. */
+  #scene { position: fixed; inset: 0; touch-action: none; }
+  .panel { position: fixed; background: var(--panel); backdrop-filter: blur(14px);
+    border: 1px solid var(--line); border-radius: 12px; }
+
+  /* tabs */
+  #tabs { top: 14px; left: 50%; transform: translateX(-50%); display: flex; gap: 3px; padding: 3px; z-index: 5; }
+  #tabs button { padding: 6px 15px; border: 0; border-radius: 9px; background: transparent;
+    color: var(--dim); font: inherit; font-weight: 600; cursor: pointer; }
+  #tabs button:hover { color: var(--text); }
+  #tabs button.on { background: rgba(255,255,255,.1); color: var(--text); }
+
+  /* tree view */
+  #treeWrap { position: fixed; inset: 0; overflow: auto; display: none; padding: 66px 340px 70px 282px; }
+  #treeWrap.on { display: block; }
+  #tree { display: block; }
+  #tree text { font-family: ui-sans-serif, system-ui, "Segoe UI", sans-serif; pointer-events: none; }
+  #tree .tn:hover rect { stroke-opacity: 1; }
+  .treeOnly, .mapOnly { display: block; }
+  body.tree .mapOnly, body.map .treeOnly { display: none; }
+  select.act { width: 100%; padding: 7px; border-radius: 8px; border: 1px solid var(--line);
+    background: rgba(0,0,0,.35); color: var(--text); font: inherit; cursor: pointer; }
+  .hint { color: var(--dim); font-size: 10.5px; margin-top: 7px; line-height: 1.45; }
+
+  /* left rail */
+  #controls { top: 14px; left: 14px; width: 252px; max-height: calc(100vh - 28px);
+    overflow-y: auto; padding: 14px; }
+  #controls h1 { margin: 0 0 2px; font-size: 15px; letter-spacing: .2px; }
+  #controls .sub { color: var(--dim); font-size: 11px; margin-bottom: 12px; }
+  .grp { margin-bottom: 14px; }
+  .grp > h2 { font-size: 10px; text-transform: uppercase; letter-spacing: .1em;
+    color: var(--dim); margin: 0 0 7px; font-weight: 600; }
+  label.row { display: flex; align-items: center; gap: 8px; padding: 3px 0; cursor: pointer; user-select: none; }
+  label.row:hover { color: #fff; }
+  label.row input { accent-color: var(--accent); margin: 0; }
+  .swatch { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+  .count { margin-left: auto; color: var(--dim); font-variant-numeric: tabular-nums; font-size: 11px; }
+  #search { width: 100%; padding: 7px 9px; border-radius: 8px; border: 1px solid var(--line);
+    background: rgba(0,0,0,.35); color: var(--text); font: inherit; }
+  #search:focus { outline: 1px solid var(--accent); }
+  button.act { width: 100%; padding: 7px; border-radius: 8px; border: 1px solid var(--line);
+    background: rgba(255,255,255,.05); color: var(--text); font: inherit; cursor: pointer; }
+  button.act:hover { background: rgba(255,255,255,.11); }
+
+  /* right inspector */
+  #inspect { top: 14px; right: 14px; width: 320px; max-height: calc(100vh - 28px);
+    overflow-y: auto; padding: 14px; display: none; }
+  #inspect.on { display: block; }
+  #inspect h3 { margin: 0 0 3px; font-size: 14px; word-break: break-word; }
+  #inspect .kind { color: var(--dim); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; }
+  .pill { display: inline-flex; align-items: center; gap: 5px; padding: 3px 8px; border-radius: 999px;
+    font-size: 11px; font-weight: 600; margin: 9px 0; }
+  .why { color: var(--dim); font-size: 11.5px; border-left: 2px solid var(--line); padding-left: 8px; margin: 9px 0; }
+  .file { font-family: ui-monospace, "Cascadia Code", Consolas, monospace; font-size: 10.5px;
+    color: var(--accent); word-break: break-all; }
+  .det { font-size: 11.5px; color: #b9c2d6; max-height: 110px; overflow-y: auto; margin: 8px 0; }
+  .rel h4 { font-size: 10px; text-transform: uppercase; letter-spacing: .09em; color: var(--dim);
+    margin: 12px 0 5px; font-weight: 600; }
+  .rel div { padding: 2px 0; cursor: pointer; font-size: 11.5px; display: flex; gap: 6px; align-items: center; }
+  .rel div:hover { color: #fff; }
+  .rel .t { color: var(--dim); font-size: 10px; flex: none; }
+
+  /* bottom status */
+  #hud { bottom: 14px; left: 14px; padding: 9px 13px; font-size: 11.5px; color: var(--dim); }
+  #hud b { color: var(--text); font-weight: 600; }
+  #hud .warn { color: #ffb03a; }
+  #tip { position: fixed; pointer-events: none; padding: 5px 9px; border-radius: 7px;
+    background: rgba(0,0,0,.9); border: 1px solid var(--line); font-size: 11.5px;
+    display: none; z-index: 10; white-space: nowrap; }
+  #loading { position: fixed; inset: 0; display: grid; place-items: center; color: var(--dim); }
+
+  /* the drawer toggle + scrim exist only on small screens */
+  #menuBtn, #scrim { display: none; }
+
+  /* ── small screens ─────────────────────────────────────────────────────────
+     The desktop layout parks a 252px rail, centred tabs and a full-width HUD on
+     top of each other once the viewport is a phone. Below 860px the rail
+     becomes a drawer, the inspector becomes a bottom sheet, and the top row is
+     laid out so nothing overlaps anything. */
+  @media (max-width: 860px) {
+    #menuBtn { display: block; position: fixed; top: 10px; left: 10px; z-index: 30;
+      padding: 9px 13px; font: inherit; font-size: 15px; line-height: 1; color: var(--text);
+      background: var(--panel); border: 1px solid var(--line); border-radius: 11px; cursor: pointer; }
+    #menuBtn[aria-expanded="true"] { color: var(--accent); }
+
+    #tabs { top: 10px; right: 10px; left: auto; transform: none; z-index: 20; }
+    #tabs button { padding: 7px 11px; font-size: 12px; }
+
+    #controls { top: 0; left: 0; bottom: 0; width: min(86vw, 310px); max-height: 100vh;
+      border-radius: 0 14px 14px 0; border-left: 0; padding-top: 56px; z-index: 40;
+      transform: translateX(-102%); transition: transform .22s ease;
+      -webkit-overflow-scrolling: touch; }
+    #controls.open { transform: none; }
+
+    #scrim { display: block; position: fixed; inset: 0; z-index: 35;
+      background: rgba(0,0,0,.55); opacity: 0; pointer-events: none; transition: opacity .22s ease; }
+    #scrim.on { opacity: 1; pointer-events: auto; }
+
+    /* inspector as a bottom sheet, so it never fights the map for width */
+    #inspect { top: auto; right: 0; left: 0; bottom: 0; width: auto;
+      max-height: 54vh; border-radius: 14px 14px 0 0; z-index: 25; padding-bottom: 20px; }
+
+    #hud { left: 8px; right: 8px; bottom: 8px; font-size: 10px; line-height: 1.45;
+      padding: 7px 10px; max-height: 4.4em; overflow: hidden; }
+
+    #treeWrap { padding: 58px 14px 86px 14px; }
+    #tip { display: none !important; }  /* no hover on touch — the sheet does this job */
+  }
+
+  @media (max-width: 860px) and (orientation: landscape) {
+    #inspect { max-height: 78vh; width: min(56vw, 340px); left: auto; right: 0; top: 0; bottom: 0;
+      border-radius: 14px 0 0 14px; }
+    #hud { right: auto; max-width: 60vw; }
+  }
+</style>
+  <script type="module" crossorigin src="./assets/index-Crp7NE2U.js"></script>
+</head>
+<body>
+  <div id="loading">building the map…</div>
+  <canvas id="scene"></canvas>
+  <div id="treeWrap"><svg id="tree"></svg></div>
+
+  <button id="menuBtn" aria-label="Filters and options" aria-expanded="false" aria-controls="controls">☰</button>
+  <div id="scrim"></div>
+
+  <nav class="panel" id="tabs">
+    <button data-tab="map" class="on">3D Map</button>
+    <button data-tab="tree">조직도 Tree</button>
+  </nav>
+
+  <aside class="panel" id="controls">
+    <h1>Byeharu — Project Map</h1>
+    <div class="sub" id="subtitle">—</div>
+
+    <div class="grp">
+      <input id="search" placeholder="Search nodes…" autocomplete="off" />
+    </div>
+
+    <div class="grp treeOnly">
+      <h2>Arrange by</h2>
+      <select class="act" id="treeMode">
+        <option value="roadmap">What is next (roadmap)</option>
+        <option value="system">Ownership (조직도)</option>
+        <option value="build">The order we built it</option>
+        <option value="feature">Feature gate</option>
+      </select>
+      <div class="hint" id="treeHint"></div>
+    </div>
+
+    <div class="grp treeOnly">
+      <h2>Tree</h2>
+      <label class="row"><button class="act" id="expandAll">Expand all</button></label>
+      <label class="row"><button class="act" id="collapseAll">Collapse all</button></label>
+    </div>
+
+    <div class="grp">
+      <h2>Status</h2>
+      <div id="statusFilters"></div>
+    </div>
+
+    <div class="grp mapOnly">
+      <h2>Node type</h2>
+      <div id="kindFilters"></div>
+    </div>
+
+    <div class="grp mapOnly">
+      <h2>Connections</h2>
+      <div id="edgeFilters"></div>
+    </div>
+
+    <div class="grp mapOnly">
+      <button class="act" id="reset">Reset view &amp; filters</button>
+    </div>
+  </aside>
+
+  <aside class="panel" id="inspect"></aside>
+  <div class="panel" id="hud">—</div>
+  <div id="tip"></div>
+
+</body>
+</html>

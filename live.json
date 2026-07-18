@@ -1,0 +1,47 @@
+{
+ "fetchedAt": "2026-07-18T02:27:08.214Z",
+ "sources": {
+  "gameConfig": {
+   "ok": false,
+   "reason": "no VITE_SUPABASE_URL / VITE_SUPABASE_ANON_KEY (looked in C:\\Users\\gkwng\\dev\\byeharu-pmap\\.env.local)"
+  },
+  "deploy": {
+   "ok": true,
+   "newest": {
+    "id": 29600147726,
+    "status": "completed",
+    "conclusion": "success",
+    "branch": "main",
+    "createdAt": "2026-07-17T17:27:59Z"
+   }
+  }
+ },
+ "flags": {},
+ "configRows": 0,
+ "deploy": {
+  "state": "success",
+  "runs": [
+   {
+    "id": 29600147726,
+    "status": "completed",
+    "conclusion": "success",
+    "branch": "main",
+    "createdAt": "2026-07-17T17:27:59Z"
+   },
+   {
+    "id": 29597947220,
+    "status": "completed",
+    "conclusion": "cancelled",
+    "branch": "main",
+    "createdAt": "2026-07-17T16:53:46Z"
+   },
+   {
+    "id": 29593513016,
+    "status": "completed",
+    "conclusion": "cancelled",
+    "branch": "main",
+    "createdAt": "2026-07-17T15:46:50Z"
+   }
+  ]
+ }
+}
