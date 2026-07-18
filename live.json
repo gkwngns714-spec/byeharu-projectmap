@@ -1,19 +1,19 @@
 {
- "fetchedAt": "2026-07-18T05:41:22.066Z",
+ "fetchedAt": "2026-07-18T06:10:44.670Z",
  "sources": {
   "gameConfig": {
    "ok": true,
    "host": "dlkbwztrdvnnjlvaydut.supabase.co",
-   "rows": 106
+   "rows": 108
   },
   "deploy": {
    "ok": true,
    "newest": {
-    "id": 29632551186,
-    "status": "waiting",
-    "conclusion": "",
+    "id": 29633096035,
+    "status": "completed",
+    "conclusion": "success",
     "branch": "main",
-    "createdAt": "2026-07-18T05:36:36Z"
+    "createdAt": "2026-07-18T05:55:26Z"
    }
   }
  },
@@ -46,16 +46,24 @@
   "fleet_control_enabled": false,
   "command_buffs_enabled": false,
   "launch_from_dock_enabled": true,
-  "fleet_movement_unified_enabled": true
+  "fleet_movement_unified_enabled": true,
+  "timed_docking_enabled": false
  },
- "configRows": 106,
+ "configRows": 108,
  "deploy": {
-  "state": "awaiting-approval",
+  "state": "success",
   "runs": [
    {
+    "id": 29633096035,
+    "status": "completed",
+    "conclusion": "success",
+    "branch": "main",
+    "createdAt": "2026-07-18T05:55:26Z"
+   },
+   {
     "id": 29632551186,
-    "status": "waiting",
-    "conclusion": "",
+    "status": "completed",
+    "conclusion": "success",
     "branch": "main",
     "createdAt": "2026-07-18T05:36:36Z"
    },
