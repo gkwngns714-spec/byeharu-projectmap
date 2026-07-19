@@ -1,0 +1,112 @@
+name: Refresh project map
+
+# Regenerates the Byeharu Project Map from source and republishes it to this
+# repo's master root (which GitHub Pages serves at
+# https://gkwngns714-spec.github.io/byeharu-projectmap/).
+#
+# WHY THIS LIVES HERE (and not in the game repo): the projectmap tool lives on
+# the `feat-project-map` branch of gkwngns714-spec/byeharu, but GitHub only runs
+# `schedule:` triggers from a repo's DEFAULT branch — and the game repo's default
+# branch (main) has no projectmap. This repo's default branch is master, so the
+# schedule fires reliably here. The job checks out the game repo itself as its
+# source of truth.
+#
+# WHAT EACH INPUT NEEDS:
+#   scan  (graph.json)  — only the game repo's git history. No secrets. Always works.
+#   live  (live.json)   — the PUBLIC anon Supabase key (baked below; already ships
+#                         in the game's public bundle) for flag colours, plus a gh
+#                         token to read the Deploy workflow's run state.
+#   wip   (wip.json)    — a gh token to list the game repo's open PRs.
+# live/wip degrade gracefully: if a token or endpoint is unavailable the overlay
+# is simply thinner — the structural map (scan) still refreshes.
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'   # every 30 minutes
+  workflow_dispatch:          # manual "Run workflow" button
+  repository_dispatch:
+    types: [game-updated]     # optional: game repo can ping this on push to main
+
+permissions:
+  contents: write             # publish the rebuilt site to master
+
+concurrency:
+  group: pmap-refresh
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Pages repo (deploy target + this workflow)
+        uses: actions/checkout@v4
+        with:
+          path: pages
+
+      - name: Checkout game repo (source of truth)
+        uses: actions/checkout@v4
+        with:
+          repository: gkwngns714-spec/byeharu
+          ref: feat-project-map
+          path: game
+          fetch-depth: 0        # scan.mjs reads full git history for build dates
+          token: ${{ secrets.PMAP_GH_TOKEN || secrets.GITHUB_TOKEN }}
+
+      - name: Fetch all game branches (wip.mjs diffs origin/main...origin/<pr>)
+        working-directory: game
+        run: |
+          git config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*'
+          git fetch origin --prune --quiet
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install projectmap deps
+        working-directory: game/tools/projectmap
+        run: npm ci
+
+      - name: Scan repo -> graph.json (structure; no secrets)
+        working-directory: game/tools/projectmap
+        run: npm run scan
+
+      - name: Live production overlay -> live.json
+        working-directory: game/tools/projectmap
+        env:
+          # PUBLIC anon values — already shipped in the game's public Pages bundle.
+          # A repo secret of the same name (if ever set, e.g. after a key rotation)
+          # takes precedence over these literals.
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL || 'https://dlkbwztrdvnnjlvaydut.supabase.co' }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY || 'sb_publishable_wUFproHbK5UHvzOizt2HIw_D92-LhY3' }}
+          GH_TOKEN: ${{ secrets.PMAP_GH_TOKEN || secrets.GITHUB_TOKEN }}
+        run: npm run live || echo "live overlay degraded — continuing with structure"
+
+      - name: Work-in-progress overlay -> wip.json
+        working-directory: game/tools/projectmap
+        env:
+          GH_TOKEN: ${{ secrets.PMAP_GH_TOKEN || secrets.GITHUB_TOKEN }}
+        run: npm run wip || echo "wip overlay degraded — continuing with structure"
+
+      - name: Build
+        working-directory: game/tools/projectmap
+        run: npx vite build
+
+      - name: Publish rebuilt site -> master root
+        working-directory: pages
+        run: |
+          # Clear the previously served build, but keep repo plumbing: the git dir,
+          # this workflow, the Jekyll opt-out, and the repo readme.
+          find . -mindepth 1 -maxdepth 1 \
+            ! -name '.git' ! -name '.github' ! -name '.nojekyll' ! -name 'README.md' \
+            -exec rm -rf {} +
+          cp -r ../game/tools/projectmap/dist/. .
+          touch .nojekyll
+          git config user.name  'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to publish."
+          else
+            git commit -m "map refresh $(date -u +%FT%TZ)"
+            git push
+          fi
