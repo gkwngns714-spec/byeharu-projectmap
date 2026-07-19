@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-07-19T14:03:38.204Z",
+ "fetchedAt": "2026-07-19T15:31:58.960Z",
  "sources": {
   "gameConfig": {
    "ok": true,
@@ -80,13 +80,6 @@
     "conclusion": "success",
     "branch": "main",
     "createdAt": "2026-07-19T06:01:07Z"
-   },
-   {
-    "id": 29674670066,
-    "status": "completed",
-    "conclusion": "success",
-    "branch": "main",
-    "createdAt": "2026-07-19T05:19:27Z"
    }
   ]
  }
