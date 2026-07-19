@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-07-19T04:24:14.937Z",
+ "fetchedAt": "2026-07-19T07:06:29.364Z",
  "sources": {
   "gameConfig": {
    "ok": true,
@@ -9,11 +9,11 @@
   "deploy": {
    "ok": true,
    "newest": {
-    "id": 29667752486,
+    "id": 29675750946,
     "status": "completed",
     "conclusion": "success",
     "branch": "main",
-    "createdAt": "2026-07-19T00:55:31Z"
+    "createdAt": "2026-07-19T06:01:07Z"
    }
   }
  },
@@ -52,14 +52,28 @@
   "per_ship_targeting_enabled": true,
   "pirate_intercept_enabled": true,
   "port_shop_enabled": true,
+  "spatial_combat_enabled": false,
   "combat_telegraph_enabled": false,
-  "spatial_combat_enabled": true,
   "dev_zone_editor_enabled": true
  },
  "configRows": 130,
  "deploy": {
   "state": "success",
   "runs": [
+   {
+    "id": 29675750946,
+    "status": "completed",
+    "conclusion": "success",
+    "branch": "main",
+    "createdAt": "2026-07-19T06:01:07Z"
+   },
+   {
+    "id": 29674670066,
+    "status": "completed",
+    "conclusion": "success",
+    "branch": "main",
+    "createdAt": "2026-07-19T05:19:27Z"
+   },
    {
     "id": 29667752486,
     "status": "completed",
@@ -73,13 +87,6 @@
     "conclusion": "success",
     "branch": "main",
     "createdAt": "2026-07-19T00:52:57Z"
-   },
-   {
-    "id": 29667116498,
-    "status": "completed",
-    "conclusion": "success",
-    "branch": "main",
-    "createdAt": "2026-07-19T00:32:32Z"
    }
   ]
  }
