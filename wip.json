@@ -1,22 +1,8 @@
 {
-  "generatedAt": "2026-07-19T00:49:15.718Z",
+  "generatedAt": "2026-07-19T04:24:18.782Z",
   "source": "open pull requests on gkwngns714-spec/byeharu",
-  "count": 2,
+  "count": 1,
   "items": [
-    {
-      "pr": 215,
-      "title": "DANGER-ZONE COMBAT: reliable ambush on zone entry (0236) + intercept→spatial end-to-end proof",
-      "branch": "slice-danger-combat-fix",
-      "stamp": "20260618000236",
-      "color": "#ff2d95",
-      "touches": {
-        "functions": [],
-        "tables": []
-      },
-      "nodes": [
-        "system:Combat"
-      ]
-    },
     {
       "pr": 162,
       "title": "CMDBUFF-ONE: one command buff per fleet — the first command ship's (amends 0205, still DARK)",
