@@ -1,29 +1,20 @@
 {
-  "generatedAt": "2026-07-18T16:30:42.912Z",
+  "generatedAt": "2026-07-19T00:49:15.718Z",
   "source": "open pull requests on gkwngns714-spec/byeharu",
   "count": 2,
   "items": [
     {
-      "pr": 205,
-      "title": "COMBAT SLICE 3: spatial combat — positions, CLOSE-vs-KITE AI, spatial tick (0234, dark)",
-      "branch": "slice-combat-s3-spatial",
-      "stamp": "20260618000234",
+      "pr": 215,
+      "title": "DANGER-ZONE COMBAT: reliable ambush on zone entry (0236) + intercept→spatial end-to-end proof",
+      "branch": "slice-danger-combat-fix",
+      "stamp": "20260618000236",
       "color": "#ff2d95",
       "touches": {
-        "functions": [
-          "combat_create_group_encounter",
-          "process_combat_ticks",
-          "report_create"
-        ],
-        "tables": [
-          "combat_units"
-        ]
+        "functions": [],
+        "tables": []
       },
       "nodes": [
-        "fn:combat_create_group_encounter",
-        "fn:process_combat_ticks",
-        "fn:report_create",
-        "table:combat_units"
+        "system:Combat"
       ]
     },
     {

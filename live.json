@@ -1,19 +1,19 @@
 {
- "fetchedAt": "2026-07-18T14:39:03.949Z",
+ "fetchedAt": "2026-07-19T00:49:11.966Z",
  "sources": {
   "gameConfig": {
    "ok": true,
    "host": "dlkbwztrdvnnjlvaydut.supabase.co",
-   "rows": 112
+   "rows": 129
   },
   "deploy": {
    "ok": true,
    "newest": {
-    "id": 29648071825,
+    "id": 29667116498,
     "status": "completed",
     "conclusion": "success",
     "branch": "main",
-    "createdAt": "2026-07-18T14:27:36Z"
+    "createdAt": "2026-07-19T00:32:32Z"
    }
   }
  },
@@ -41,69 +41,37 @@
   "haul_contracts_enabled": false,
   "captain_growth_enabled": false,
   "ship_traits_enabled": false,
-  "repair_economy_enabled": false,
   "fleet_control_enabled": false,
   "command_buffs_enabled": false,
   "launch_from_dock_enabled": true,
   "fleet_movement_unified_enabled": true,
   "timed_docking_enabled": false,
   "shipyard_enabled": true,
+  "repair_economy_enabled": true,
   "per_ship_targeting_enabled": true,
-  "module_range_attributes_enabled": false,
-  "combat_telegraph_enabled": false
+  "pirate_intercept_enabled": true,
+  "port_shop_enabled": true,
+  "combat_telegraph_enabled": false,
+  "spatial_combat_enabled": false,
+  "module_range_attributes_enabled": false
  },
- "configRows": 112,
+ "configRows": 129,
  "deploy": {
   "state": "success",
   "runs": [
    {
-    "id": 29648071825,
+    "id": 29667116498,
     "status": "completed",
     "conclusion": "success",
     "branch": "main",
-    "createdAt": "2026-07-18T14:27:36Z"
+    "createdAt": "2026-07-19T00:32:32Z"
    },
    {
-    "id": 29648064660,
-    "status": "completed",
-    "conclusion": "cancelled",
-    "branch": "main",
-    "createdAt": "2026-07-18T14:27:23Z"
-   },
-   {
-    "id": 29648062003,
-    "status": "completed",
-    "conclusion": "cancelled",
-    "branch": "main",
-    "createdAt": "2026-07-18T14:27:19Z"
-   },
-   {
-    "id": 29647906730,
+    "id": 29654673177,
     "status": "completed",
     "conclusion": "success",
     "branch": "main",
-    "createdAt": "2026-07-18T14:22:20Z"
-   },
-   {
-    "id": 29647719464,
-    "status": "completed",
-    "conclusion": "failure",
-    "branch": "main",
-    "createdAt": "2026-07-18T14:16:18Z"
-   },
-   {
-    "id": 29647208568,
-    "status": "completed",
-    "conclusion": "success",
-    "branch": "main",
-    "createdAt": "2026-07-18T14:00:33Z"
-   },
-   {
-    "id": 29646790765,
-    "status": "completed",
-    "conclusion": "success",
-    "branch": "main",
-    "createdAt": "2026-07-18T13:47:13Z"
+    "createdAt": "2026-07-18T17:49:50Z"
    }
   ]
  }
