@@ -1,13 +1,20 @@
 {
- "fetchedAt": "2026-07-21T12:56:22.231Z",
+ "fetchedAt": "2026-07-21T15:10:05.952Z",
  "sources": {
   "gameConfig": {
    "ok": true,
    "host": "dlkbwztrdvnnjlvaydut.supabase.co",
-   "rows": 130
+   "rows": 134
   },
   "deploy": {
-   "ok": true
+   "ok": true,
+   "newest": {
+    "id": 29836995512,
+    "status": "completed",
+    "conclusion": "success",
+    "branch": "main",
+    "createdAt": "2026-07-21T13:59:33Z"
+   }
   }
  },
  "flags": {
@@ -47,11 +54,51 @@
   "port_shop_enabled": true,
   "combat_telegraph_enabled": false,
   "spatial_combat_enabled": true,
-  "dev_zone_editor_enabled": true
+  "dev_zone_editor_enabled": true,
+  "encounter_resolver_enabled": false,
+  "enemy_content_registry_enabled": true,
+  "encounter_authoring_enabled": true,
+  "encounter_binding_authoring_enabled": true
  },
- "configRows": 130,
+ "configRows": 134,
  "deploy": {
-  "state": "no-runs",
-  "runs": []
+  "state": "success",
+  "runs": [
+   {
+    "id": 29836995512,
+    "status": "completed",
+    "conclusion": "success",
+    "branch": "main",
+    "createdAt": "2026-07-21T13:59:33Z"
+   },
+   {
+    "id": 29836767484,
+    "status": "completed",
+    "conclusion": "cancelled",
+    "branch": "main",
+    "createdAt": "2026-07-21T13:56:35Z"
+   },
+   {
+    "id": 29836705989,
+    "status": "completed",
+    "conclusion": "cancelled",
+    "branch": "main",
+    "createdAt": "2026-07-21T13:55:48Z"
+   },
+   {
+    "id": 29836586552,
+    "status": "completed",
+    "conclusion": "cancelled",
+    "branch": "main",
+    "createdAt": "2026-07-21T13:54:18Z"
+   },
+   {
+    "id": 29836429387,
+    "status": "completed",
+    "conclusion": "cancelled",
+    "branch": "main",
+    "createdAt": "2026-07-21T13:52:17Z"
+   }
+  ]
  }
 }

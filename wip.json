@@ -1,104 +1,14 @@
 {
-  "generatedAt": "2026-07-21T12:56:26.574Z",
+  "generatedAt": "2026-07-21T15:10:11.143Z",
   "source": "open pull requests on gkwngns714-spec/byeharu",
-  "count": 6,
+  "count": 1,
   "items": [
-    {
-      "pr": 263,
-      "title": "E5 - Resolver per-encounter variety + zero-elite readiness (dark, byte-identical when off)",
-      "branch": "slice-e5-resolver-variety-zero-elite",
-      "stamp": "20260618000261",
-      "color": "#ff2d95",
-      "touches": {
-        "functions": [
-          "process_combat_ticks"
-        ],
-        "tables": [
-          "combat_encounters"
-        ]
-      },
-      "nodes": [
-        "fn:process_combat_ticks",
-        "table:combat_encounters"
-      ]
-    },
-    {
-      "pr": 262,
-      "title": "Combat-content activation-prep + program summary (authored, not run)",
-      "branch": "slice-combat-content-activation-prep",
-      "stamp": "20260618000260",
-      "color": "#00e5ff",
-      "touches": {
-        "functions": [
-          "process_combat_ticks"
-        ],
-        "tables": [
-          "combat_encounters"
-        ]
-      },
-      "nodes": [
-        "fn:process_combat_ticks",
-        "table:combat_encounters"
-      ]
-    },
-    {
-      "pr": 261,
-      "title": "E4 - World Editor Combat-Authoring UI (owner-only, fail-closed)",
-      "branch": "slice-e4-worldeditor-combat-ui",
-      "stamp": "20260618000260",
-      "color": "#ffd400",
-      "touches": {
-        "functions": [
-          "process_combat_ticks"
-        ],
-        "tables": [
-          "combat_encounters"
-        ]
-      },
-      "nodes": [
-        "fn:process_combat_ticks",
-        "table:combat_encounters"
-      ]
-    },
-    {
-      "pr": 260,
-      "title": "E3 — Encounter Runtime Resolver (dark, byte-identical when off)",
-      "branch": "slice-e3-encounter-resolver",
-      "stamp": "20260618000260",
-      "color": "#7cff00",
-      "touches": {
-        "functions": [
-          "process_combat_ticks"
-        ],
-        "tables": [
-          "combat_encounters"
-        ]
-      },
-      "nodes": [
-        "fn:process_combat_ticks",
-        "table:combat_encounters"
-      ]
-    },
-    {
-      "pr": 258,
-      "title": "E1 — Fleet Templates + Encounter Profiles (dark, fail-closed)",
-      "branch": "slice-e1-fleet-encounter-profiles",
-      "stamp": "20260618000258",
-      "color": "#c04bff",
-      "touches": {
-        "functions": [],
-        "tables": []
-      },
-      "nodes": [
-        "system:Fleet"
-      ]
-    },
     {
       "pr": 162,
       "title": "CMDBUFF-ONE: one command buff per fleet — the first command ship's (amends 0205, still DARK)",
       "branch": "slice-cmdbuff-one",
       "stamp": null,
-      "color": "#c04bff",
+      "color": "#ff7a00",
       "touches": {
         "functions": [],
         "tables": []
