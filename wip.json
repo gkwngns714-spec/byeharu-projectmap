@@ -1,14 +1,28 @@
 {
-  "generatedAt": "2026-07-21T06:12:42.652Z",
+  "generatedAt": "2026-07-21T09:11:51.540Z",
   "source": "open pull requests on gkwngns714-spec/byeharu",
-  "count": 1,
+  "count": 2,
   "items": [
+    {
+      "pr": 258,
+      "title": "E1 — Fleet Templates + Encounter Profiles (dark, fail-closed)",
+      "branch": "slice-e1-fleet-encounter-profiles",
+      "stamp": "20260618000258",
+      "color": "#ff2d95",
+      "touches": {
+        "functions": [],
+        "tables": []
+      },
+      "nodes": [
+        "system:Fleet"
+      ]
+    },
     {
       "pr": 162,
       "title": "CMDBUFF-ONE: one command buff per fleet — the first command ship's (amends 0205, still DARK)",
       "branch": "slice-cmdbuff-one",
       "stamp": null,
-      "color": "#ff7a00",
+      "color": "#ff2d95",
       "touches": {
         "functions": [],
         "tables": []
