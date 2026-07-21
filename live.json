@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-07-21T15:10:05.952Z",
+ "fetchedAt": "2026-07-21T16:56:37.582Z",
  "sources": {
   "gameConfig": {
    "ok": true,
@@ -55,10 +55,10 @@
   "combat_telegraph_enabled": false,
   "spatial_combat_enabled": true,
   "dev_zone_editor_enabled": true,
-  "encounter_resolver_enabled": false,
   "enemy_content_registry_enabled": true,
   "encounter_authoring_enabled": true,
-  "encounter_binding_authoring_enabled": true
+  "encounter_binding_authoring_enabled": true,
+  "encounter_resolver_enabled": true
  },
  "configRows": 134,
  "deploy": {
