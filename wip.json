@@ -1,34 +1,8 @@
 {
-  "generatedAt": "2026-07-22T10:01:08.368Z",
+  "generatedAt": "2026-07-22T12:12:51.129Z",
   "source": "open pull requests on gkwngns714-spec/byeharu",
-  "count": 2,
+  "count": 1,
   "items": [
-    {
-      "pr": 267,
-      "title": "world-editor: ONE canonical ±10000 point-coordinate validation authority (behavior-preserving)",
-      "branch": "slice-worldeditor-canonical-coord-authority",
-      "stamp": "20260618000265",
-      "color": "#ff2d95",
-      "touches": {
-        "functions": [
-          "exploration_site_create",
-          "exploration_site_update",
-          "mining_field_create",
-          "mining_field_update",
-          "location_create",
-          "location_update"
-        ],
-        "tables": []
-      },
-      "nodes": [
-        "fn:exploration_site_create",
-        "fn:exploration_site_update",
-        "fn:mining_field_create",
-        "fn:mining_field_update",
-        "fn:location_create",
-        "fn:location_update"
-      ]
-    },
     {
       "pr": 162,
       "title": "CMDBUFF-ONE: one command buff per fleet — the first command ship's (amends 0205, still DARK)",
