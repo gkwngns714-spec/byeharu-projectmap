@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-07-22T00:57:00.556Z",
+ "fetchedAt": "2026-07-22T04:24:06.221Z",
  "sources": {
   "gameConfig": {
    "ok": true,
@@ -58,7 +58,7 @@
   "enemy_content_registry_enabled": true,
   "encounter_authoring_enabled": true,
   "encounter_binding_authoring_enabled": true,
-  "encounter_resolver_enabled": true
+  "encounter_resolver_enabled": false
  },
  "configRows": 134,
  "deploy": {
