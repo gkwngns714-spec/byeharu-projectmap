@@ -1,14 +1,28 @@
 {
-  "generatedAt": "2026-07-22T14:35:19.404Z",
+  "generatedAt": "2026-07-22T16:23:00.126Z",
   "source": "open pull requests on gkwngns714-spec/byeharu",
-  "count": 1,
+  "count": 2,
   "items": [
+    {
+      "pr": 282,
+      "title": "docs: World Editor roadmap closure (0263–0271, lifecycle parity, production-live)",
+      "branch": "docs-worldeditor-roadmap-closure",
+      "stamp": null,
+      "color": "#ff2d95",
+      "touches": {
+        "functions": [],
+        "tables": []
+      },
+      "nodes": [
+        "system:Production"
+      ]
+    },
     {
       "pr": 162,
       "title": "CMDBUFF-ONE: one command buff per fleet — the first command ship's (amends 0205, still DARK)",
       "branch": "slice-cmdbuff-one",
       "stamp": null,
-      "color": "#ff7a00",
+      "color": "#c04bff",
       "touches": {
         "functions": [],
         "tables": []
