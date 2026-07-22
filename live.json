@@ -1,19 +1,19 @@
 {
- "fetchedAt": "2026-07-22T04:24:06.221Z",
+ "fetchedAt": "2026-07-22T07:13:52.789Z",
  "sources": {
   "gameConfig": {
    "ok": true,
    "host": "dlkbwztrdvnnjlvaydut.supabase.co",
-   "rows": 134
+   "rows": 139
   },
   "deploy": {
    "ok": true,
    "newest": {
-    "id": 29836995512,
+    "id": 29893739111,
     "status": "completed",
     "conclusion": "success",
     "branch": "main",
-    "createdAt": "2026-07-21T13:59:33Z"
+    "createdAt": "2026-07-22T05:25:30Z"
    }
   }
  },
@@ -60,10 +60,17 @@
   "encounter_binding_authoring_enabled": true,
   "encounter_resolver_enabled": false
  },
- "configRows": 134,
+ "configRows": 139,
  "deploy": {
   "state": "success",
   "runs": [
+   {
+    "id": 29893739111,
+    "status": "completed",
+    "conclusion": "success",
+    "branch": "main",
+    "createdAt": "2026-07-22T05:25:30Z"
+   },
    {
     "id": 29836995512,
     "status": "completed",
