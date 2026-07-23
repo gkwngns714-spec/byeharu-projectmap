@@ -1,10 +1,10 @@
 {
- "fetchedAt": "2026-07-23T06:16:17.832Z",
+ "fetchedAt": "2026-07-23T09:09:45.195Z",
  "sources": {
   "gameConfig": {
    "ok": true,
    "host": "dlkbwztrdvnnjlvaydut.supabase.co",
-   "rows": 139
+   "rows": 140
   },
   "deploy": {
    "ok": true
@@ -53,7 +53,7 @@
   "encounter_binding_authoring_enabled": true,
   "encounter_resolver_enabled": false
  },
- "configRows": 139,
+ "configRows": 140,
  "deploy": {
   "state": "no-runs",
   "runs": []
