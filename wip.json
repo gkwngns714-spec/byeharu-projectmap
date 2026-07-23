@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-07-22T23:31:51.801Z",
+  "generatedAt": "2026-07-23T03:23:29.259Z",
   "source": "open pull requests on gkwngns714-spec/byeharu",
-  "count": 2,
+  "count": 4,
   "items": [
     {
-      "pr": 282,
-      "title": "docs: World Editor roadmap closure (0263–0271, lifecycle parity, production-live)",
-      "branch": "docs-worldeditor-roadmap-closure",
+      "pr": 286,
+      "title": "docs: unified-movement cutover truth + broken-rollback defect (verification classification B)",
+      "branch": "docs-movement-cutover-truth",
       "stamp": null,
       "color": "#ff2d95",
       "touches": {
@@ -14,7 +14,37 @@
         "tables": []
       },
       "nodes": [
-        "system:Production"
+        "system:Movement"
+      ]
+    },
+    {
+      "pr": 285,
+      "title": "client: retire the two dead group-mover wrappers (client-only)",
+      "branch": "slice-retire-dead-group-movers",
+      "stamp": null,
+      "color": "#00e5ff",
+      "touches": {
+        "functions": [],
+        "tables": []
+      },
+      "nodes": [
+        "system:Movement"
+      ]
+    },
+    {
+      "pr": 284,
+      "title": "combat-content: elite stat wiring (migration 0272, DARK — resolver-only, tick untouched)",
+      "branch": "slice-elite-stat-wiring",
+      "stamp": "20260618000272",
+      "color": "#ffd400",
+      "touches": {
+        "functions": [
+          "resolve_location_encounter"
+        ],
+        "tables": []
+      },
+      "nodes": [
+        "fn:resolve_location_encounter"
       ]
     },
     {
@@ -22,7 +52,7 @@
       "title": "CMDBUFF-ONE: one command buff per fleet — the first command ship's (amends 0205, still DARK)",
       "branch": "slice-cmdbuff-one",
       "stamp": null,
-      "color": "#c04bff",
+      "color": "#ff2d95",
       "touches": {
         "functions": [],
         "tables": []
