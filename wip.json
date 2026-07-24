@@ -1,6 +1,21 @@
 {
-  "generatedAt": "2026-07-24T04:50:34.679Z",
+  "generatedAt": "2026-07-24T07:35:51.395Z",
   "source": "open pull requests on gkwngns714-spec/byeharu",
-  "count": 0,
-  "items": []
+  "count": 1,
+  "items": [
+    {
+      "pr": 299,
+      "title": "resolver-preflight: READ-ONLY prod go/no-go audit for encounter_resolver_enabled",
+      "branch": "osn3-resolver-preflight-audit",
+      "stamp": null,
+      "color": "#ff2d95",
+      "touches": {
+        "functions": [],
+        "tables": []
+      },
+      "nodes": [
+        "system:Movement"
+      ]
+    }
+  ]
 }
