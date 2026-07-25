@@ -1,8 +1,134 @@
 {
-  "generatedAt": "2026-07-25T08:31:30.028Z",
+  "generatedAt": "2026-07-25T10:38:04.844Z",
   "source": "open pull requests on gkwngns714-spec/byeharu",
-  "count": 6,
+  "count": 12,
   "items": [
+    {
+      "pr": 314,
+      "title": "danger-zones: fix the error precedence (0284) — eligibility before concurrency",
+      "branch": "slice-seeded-zone-precedence",
+      "stamp": "20260618000284",
+      "color": "#ff2d95",
+      "touches": {
+        "functions": [
+          "pirate_intercept_evaluate_leg",
+          "zone_update",
+          "zone_unpublish",
+          "zone_set_active"
+        ],
+        "tables": [
+          "danger_zones"
+        ]
+      },
+      "nodes": [
+        "table:danger_zones",
+        "fn:pirate_intercept_evaluate_leg",
+        "fn:zone_update",
+        "fn:zone_unpublish",
+        "fn:zone_set_active"
+      ]
+    },
+    {
+      "pr": 313,
+      "title": "danger-zones: seeded-zone unlock (0283) — re-point guards at provenance, two flags, both dark",
+      "branch": "slice-seeded-zone-unlock",
+      "stamp": "20260618000283",
+      "color": "#00e5ff",
+      "touches": {
+        "functions": [
+          "pirate_intercept_evaluate_leg",
+          "zone_update",
+          "zone_unpublish",
+          "zone_set_active"
+        ],
+        "tables": [
+          "danger_zones"
+        ]
+      },
+      "nodes": [
+        "table:danger_zones",
+        "fn:pirate_intercept_evaluate_leg",
+        "fn:zone_update",
+        "fn:zone_unpublish",
+        "fn:zone_set_active"
+      ]
+    },
+    {
+      "pr": 312,
+      "title": "danger-zones: split provenance out of source (0282) — additive, behaviour-neutral",
+      "branch": "slice-danger-zone-provenance",
+      "stamp": "20260618000282",
+      "color": "#ffd400",
+      "touches": {
+        "functions": [
+          "pirate_intercept_evaluate_leg"
+        ],
+        "tables": [
+          "danger_zones"
+        ]
+      },
+      "nodes": [
+        "table:danger_zones",
+        "fn:pirate_intercept_evaluate_leg"
+      ]
+    },
+    {
+      "pr": 311,
+      "title": "typed-zone: exploration successors (0281) — dark coexistence on its OWN gate",
+      "branch": "slice-typed-zone-exploration",
+      "stamp": "20260618000281",
+      "color": "#7cff00",
+      "touches": {
+        "functions": [
+          "pirate_intercept_evaluate_leg"
+        ],
+        "tables": [
+          "danger_zones"
+        ]
+      },
+      "nodes": [
+        "table:danger_zones",
+        "fn:pirate_intercept_evaluate_leg"
+      ]
+    },
+    {
+      "pr": 310,
+      "title": "typed-zone: mining successors (0280) — dark coexistence, no live geometry added",
+      "branch": "slice-typed-zone-mining",
+      "stamp": "20260618000280",
+      "color": "#ff7a00",
+      "touches": {
+        "functions": [
+          "pirate_intercept_evaluate_leg"
+        ],
+        "tables": [
+          "danger_zones"
+        ]
+      },
+      "nodes": [
+        "table:danger_zones",
+        "fn:pirate_intercept_evaluate_leg"
+      ]
+    },
+    {
+      "pr": 309,
+      "title": "typed-zone: combat effect + dual-gate capability (0278) — additive, fully dark",
+      "branch": "slice-typed-zone-combat",
+      "stamp": "20260618000279",
+      "color": "#c04bff",
+      "touches": {
+        "functions": [
+          "pirate_intercept_evaluate_leg"
+        ],
+        "tables": [
+          "danger_zones"
+        ]
+      },
+      "nodes": [
+        "table:danger_zones",
+        "fn:pirate_intercept_evaluate_leg"
+      ]
+    },
     {
       "pr": 308,
       "title": "world-editor: hit-test all overlapping entities and ask instead of guessing (client-only)",
