@@ -1,34 +1,14 @@
 {
-  "generatedAt": "2026-07-25T14:11:12.916Z",
+  "generatedAt": "2026-07-25T15:42:29.248Z",
   "source": "open pull requests on gkwngns714-spec/byeharu",
-  "count": 10,
+  "count": 9,
   "items": [
-    {
-      "pr": 319,
-      "title": "fix(db): 0286 — zone write commands select provenance into v_live (fixes 42703)",
-      "branch": "slice-zone-provenance-42703",
-      "stamp": "20260618000286",
-      "color": "#00e5ff",
-      "touches": {
-        "functions": [
-          "zone_update",
-          "zone_unpublish",
-          "zone_set_active"
-        ],
-        "tables": []
-      },
-      "nodes": [
-        "fn:zone_update",
-        "fn:zone_unpublish",
-        "fn:zone_set_active"
-      ]
-    },
     {
       "pr": 314,
       "title": "danger-zones: fix the error precedence (0284) — eligibility before concurrency",
       "branch": "slice-seeded-zone-precedence",
       "stamp": null,
-      "color": "#c04bff",
+      "color": "#7cff00",
       "touches": {
         "functions": [],
         "tables": []
@@ -42,7 +22,7 @@
       "title": "danger-zones: seeded-zone unlock (0283) — re-point guards at provenance, two flags, both dark",
       "branch": "slice-seeded-zone-unlock",
       "stamp": null,
-      "color": "#ff2d95",
+      "color": "#ff7a00",
       "touches": {
         "functions": [],
         "tables": []
@@ -56,7 +36,7 @@
       "title": "danger-zones: split provenance out of source (0282) — additive, behaviour-neutral",
       "branch": "slice-danger-zone-provenance",
       "stamp": null,
-      "color": "#00e5ff",
+      "color": "#c04bff",
       "touches": {
         "functions": [],
         "tables": []
@@ -70,7 +50,7 @@
       "title": "typed-zone: mining successors (0280) — dark coexistence, no live geometry added",
       "branch": "slice-typed-zone-mining",
       "stamp": null,
-      "color": "#7cff00",
+      "color": "#00e5ff",
       "touches": {
         "functions": [],
         "tables": []
@@ -84,7 +64,7 @@
       "title": "typed-zone: combat effect + dual-gate capability (0278) — additive, fully dark",
       "branch": "slice-typed-zone-combat",
       "stamp": null,
-      "color": "#ff7a00",
+      "color": "#ffd400",
       "touches": {
         "functions": [],
         "tables": []
@@ -98,7 +78,7 @@
       "title": "typed-zone: pirate runtime cutover (0276) — lands dark, one path decides",
       "branch": "slice-typed-zone-cutover",
       "stamp": null,
-      "color": "#ff2d95",
+      "color": "#ff7a00",
       "touches": {
         "functions": [],
         "tables": []
@@ -112,7 +92,7 @@
       "title": "typed-zone: read-only pirate shadow comparison (0275) — no cutover, no writes",
       "branch": "slice-typed-zone-shadow",
       "stamp": null,
-      "color": "#00e5ff",
+      "color": "#c04bff",
       "touches": {
         "functions": [],
         "tables": []
@@ -126,7 +106,7 @@
       "title": "canary: rollback-only production resolver+damage canary (pre-flip proof)",
       "branch": "osn3-resolver-damage-canary",
       "stamp": null,
-      "color": "#ffd400",
+      "color": "#ff2d95",
       "touches": {
         "functions": [],
         "tables": []
@@ -140,7 +120,7 @@
       "title": "resolver-preflight: READ-ONLY prod go/no-go audit for encounter_resolver_enabled",
       "branch": "osn3-resolver-preflight-audit",
       "stamp": null,
-      "color": "#7cff00",
+      "color": "#00e5ff",
       "touches": {
         "functions": [],
         "tables": []
