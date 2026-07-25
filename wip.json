@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-25T00:09:03.163Z",
+  "generatedAt": "2026-07-25T03:49:51.680Z",
   "source": "open pull requests on gkwngns714-spec/byeharu",
   "count": 2,
   "items": [
@@ -8,7 +8,7 @@
       "title": "canary: rollback-only production resolver+damage canary (pre-flip proof)",
       "branch": "osn3-resolver-damage-canary",
       "stamp": null,
-      "color": "#ff2d95",
+      "color": "#ffd400",
       "touches": {
         "functions": [],
         "tables": []
@@ -22,7 +22,7 @@
       "title": "resolver-preflight: READ-ONLY prod go/no-go audit for encounter_resolver_enabled",
       "branch": "osn3-resolver-preflight-audit",
       "stamp": null,
-      "color": "#00e5ff",
+      "color": "#7cff00",
       "touches": {
         "functions": [],
         "tables": []
