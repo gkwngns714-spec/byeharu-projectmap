@@ -1,17 +1,17 @@
 {
- "fetchedAt": "2026-07-25T12:05:06.374Z",
+ "fetchedAt": "2026-07-25T14:11:08.451Z",
  "sources": {
   "gameConfig": {
    "ok": true,
    "host": "dlkbwztrdvnnjlvaydut.supabase.co",
-   "rows": 140
+   "rows": 147
   },
   "deploy": {
    "ok": true,
    "newest": {
     "id": 30157291475,
-    "status": "pending",
-    "conclusion": "",
+    "status": "completed",
+    "conclusion": "success",
     "branch": "main",
     "createdAt": "2026-07-25T12:02:36Z"
    }
@@ -58,23 +58,30 @@
   "enemy_content_registry_enabled": true,
   "encounter_authoring_enabled": true,
   "encounter_binding_authoring_enabled": true,
-  "encounter_resolver_enabled": false
+  "typed_zone_authoring_enabled": true,
+  "seeded_zone_edit_enabled": true,
+  "seeded_zone_lifecycle_enabled": true,
+  "encounter_resolver_enabled": false,
+  "typed_zone_pirate_intercept_runtime_enabled": false,
+  "typed_zone_combat_runtime_enabled": false,
+  "typed_zone_mining_runtime_enabled": false,
+  "typed_zone_exploration_runtime_enabled": false
  },
- "configRows": 140,
+ "configRows": 147,
  "deploy": {
-  "state": "awaiting-approval",
+  "state": "success",
   "runs": [
    {
     "id": 30157291475,
-    "status": "pending",
-    "conclusion": "",
+    "status": "completed",
+    "conclusion": "success",
     "branch": "main",
     "createdAt": "2026-07-25T12:02:36Z"
    },
    {
     "id": 30157236472,
-    "status": "waiting",
-    "conclusion": "",
+    "status": "completed",
+    "conclusion": "cancelled",
     "branch": "main",
     "createdAt": "2026-07-25T12:00:54Z"
    }
