@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-07-26T14:10:00.802Z",
+ "fetchedAt": "2026-07-26T15:41:20.285Z",
  "sources": {
   "gameConfig": {
    "ok": true,
@@ -9,11 +9,11 @@
   "deploy": {
    "ok": true,
    "newest": {
-    "id": 30163511904,
-    "status": "completed",
-    "conclusion": "success",
+    "id": 30208704971,
+    "status": "waiting",
+    "conclusion": "",
     "branch": "main",
-    "createdAt": "2026-07-25T15:23:17Z"
+    "createdAt": "2026-07-26T15:40:28Z"
    }
   }
  },
@@ -69,14 +69,35 @@
  },
  "configRows": 147,
  "deploy": {
-  "state": "success",
+  "state": "awaiting-approval",
   "runs": [
    {
-    "id": 30163511904,
-    "status": "completed",
-    "conclusion": "success",
+    "id": 30208704971,
+    "status": "waiting",
+    "conclusion": "",
     "branch": "main",
-    "createdAt": "2026-07-25T15:23:17Z"
+    "createdAt": "2026-07-26T15:40:28Z"
+   },
+   {
+    "id": 30208472258,
+    "status": "completed",
+    "conclusion": "cancelled",
+    "branch": "main",
+    "createdAt": "2026-07-26T15:33:53Z"
+   },
+   {
+    "id": 30206882344,
+    "status": "completed",
+    "conclusion": "cancelled",
+    "branch": "main",
+    "createdAt": "2026-07-26T14:49:16Z"
+   },
+   {
+    "id": 30206838100,
+    "status": "completed",
+    "conclusion": "failure",
+    "branch": "main",
+    "createdAt": "2026-07-26T14:47:59Z"
    }
   ]
  }
