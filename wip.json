@@ -1,38 +1,14 @@
 {
-  "generatedAt": "2026-07-26T22:34:02.843Z",
+  "generatedAt": "2026-07-27T00:04:43.404Z",
   "source": "open pull requests on gkwngns714-spec/byeharu",
-  "count": 10,
+  "count": 9,
   "items": [
-    {
-      "pr": 328,
-      "title": "combat/coords: four half-landed seams closed — engagement seeding, base coordinates, zone geometry, repair-in-port",
-      "branch": "fix-base-world-scale",
-      "stamp": "20260618000297",
-      "color": "#ff2d95",
-      "touches": {
-        "functions": [
-          "process_combat_ticks",
-          "pirate_intercept_evaluate_leg",
-          "initialize_new_player",
-          "location_update",
-          "repair_main_ship"
-        ],
-        "tables": []
-      },
-      "nodes": [
-        "fn:process_combat_ticks",
-        "fn:pirate_intercept_evaluate_leg",
-        "fn:initialize_new_player",
-        "fn:location_update",
-        "fn:repair_main_ship"
-      ]
-    },
     {
       "pr": 314,
       "title": "danger-zones: fix the error precedence (0284) — eligibility before concurrency",
       "branch": "slice-seeded-zone-precedence",
       "stamp": null,
-      "color": "#ff7a00",
+      "color": "#7cff00",
       "touches": {
         "functions": [],
         "tables": []
@@ -46,7 +22,7 @@
       "title": "danger-zones: seeded-zone unlock (0283) — re-point guards at provenance, two flags, both dark",
       "branch": "slice-seeded-zone-unlock",
       "stamp": null,
-      "color": "#c04bff",
+      "color": "#ff7a00",
       "touches": {
         "functions": [],
         "tables": []
@@ -60,7 +36,7 @@
       "title": "danger-zones: split provenance out of source (0282) — additive, behaviour-neutral",
       "branch": "slice-danger-zone-provenance",
       "stamp": null,
-      "color": "#ff2d95",
+      "color": "#c04bff",
       "touches": {
         "functions": [],
         "tables": []
@@ -74,7 +50,7 @@
       "title": "typed-zone: mining successors (0280) — dark coexistence, no live geometry added",
       "branch": "slice-typed-zone-mining",
       "stamp": null,
-      "color": "#ffd400",
+      "color": "#00e5ff",
       "touches": {
         "functions": [],
         "tables": []
@@ -88,7 +64,7 @@
       "title": "typed-zone: combat effect + dual-gate capability (0278) — additive, fully dark",
       "branch": "slice-typed-zone-combat",
       "stamp": null,
-      "color": "#7cff00",
+      "color": "#ffd400",
       "touches": {
         "functions": [],
         "tables": []
@@ -102,7 +78,7 @@
       "title": "typed-zone: pirate runtime cutover (0276) — lands dark, one path decides",
       "branch": "slice-typed-zone-cutover",
       "stamp": null,
-      "color": "#c04bff",
+      "color": "#ff7a00",
       "touches": {
         "functions": [],
         "tables": []
@@ -116,7 +92,7 @@
       "title": "typed-zone: read-only pirate shadow comparison (0275) — no cutover, no writes",
       "branch": "slice-typed-zone-shadow",
       "stamp": null,
-      "color": "#ff2d95",
+      "color": "#c04bff",
       "touches": {
         "functions": [],
         "tables": []
@@ -130,7 +106,7 @@
       "title": "canary: rollback-only production resolver+damage canary (pre-flip proof)",
       "branch": "osn3-resolver-damage-canary",
       "stamp": null,
-      "color": "#00e5ff",
+      "color": "#ff2d95",
       "touches": {
         "functions": [],
         "tables": []
@@ -144,7 +120,7 @@
       "title": "resolver-preflight: READ-ONLY prod go/no-go audit for encounter_resolver_enabled",
       "branch": "osn3-resolver-preflight-audit",
       "stamp": null,
-      "color": "#ffd400",
+      "color": "#00e5ff",
       "touches": {
         "functions": [],
         "tables": []
