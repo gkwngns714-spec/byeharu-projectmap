@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-07-27T11:53:43.337Z",
+ "fetchedAt": "2026-07-27T14:47:41.776Z",
  "sources": {
   "gameConfig": {
    "ok": true,
@@ -10,8 +10,8 @@
    "ok": true,
    "newest": {
     "id": 30249580858,
-    "status": "waiting",
-    "conclusion": "",
+    "status": "completed",
+    "conclusion": "success",
     "branch": "main",
     "createdAt": "2026-07-27T08:21:21Z"
    }
@@ -48,13 +48,13 @@
   "typed_zone_authoring_enabled": true,
   "seeded_zone_edit_enabled": true,
   "seeded_zone_lifecycle_enabled": true,
-  "encounter_resolver_enabled": false,
   "salvage_market_enabled": true,
   "ship_traits_enabled": true,
   "captain_assignment_enabled": true,
   "typed_zone_combat_runtime_enabled": true,
   "typed_zone_mining_runtime_enabled": true,
   "typed_zone_exploration_runtime_enabled": true,
+  "encounter_resolver_enabled": true,
   "captain_progression_enabled": true,
   "captain_growth_enabled": true,
   "command_buffs_enabled": true,
@@ -69,12 +69,12 @@
  },
  "configRows": 147,
  "deploy": {
-  "state": "awaiting-approval",
+  "state": "success",
   "runs": [
    {
     "id": 30249580858,
-    "status": "waiting",
-    "conclusion": "",
+    "status": "completed",
+    "conclusion": "success",
     "branch": "main",
     "createdAt": "2026-07-27T08:21:21Z"
    },
@@ -91,27 +91,6 @@
     "conclusion": "success",
     "branch": "main",
     "createdAt": "2026-07-26T23:15:51Z"
-   },
-   {
-    "id": 30208704971,
-    "status": "completed",
-    "conclusion": "success",
-    "branch": "main",
-    "createdAt": "2026-07-26T15:40:28Z"
-   },
-   {
-    "id": 30208472258,
-    "status": "completed",
-    "conclusion": "cancelled",
-    "branch": "main",
-    "createdAt": "2026-07-26T15:33:53Z"
-   },
-   {
-    "id": 30206882344,
-    "status": "completed",
-    "conclusion": "cancelled",
-    "branch": "main",
-    "createdAt": "2026-07-26T14:49:16Z"
    }
   ]
  }
