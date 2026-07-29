@@ -1,16 +1,16 @@
 {
  "generatedFrom": "repo scan (no production knowledge)",
  "counts": {
-  "migrations": 298,
-  "functions": 298,
+  "migrations": 299,
+  "functions": 299,
   "tables": 100,
   "flags": 48,
   "systems": 30,
   "phases": 28,
   "rungs": 9,
-  "jobs": 242,
-  "nodes": 811,
-  "edges": 2456
+  "jobs": 243,
+  "nodes": 813,
+  "edges": 2457
  },
  "boundariesParsed": true,
  "plansParsed": true,
@@ -3388,6 +3388,17 @@
    "seedsFlag": []
   },
   {
+   "id": "mig:20260618000305",
+   "kind": "migration",
+   "label": "one_sortie_authority",
+   "stamp": "20260618000305",
+   "seq": null,
+   "addedAt": "2026-07-29T14:55:24+09:00",
+   "file": "supabase/migrations/20260618000305_one_sortie_authority.sql",
+   "detail": "0305 — ONE AUTHORITY FOR \"IS THIS GROUP ON A SORTIE?\" THE ORDER (owner, 2026-07-29): \"i want to be able to stop whenever i want\" and, on finding the duplication, \"four copies, remove necessary and do it again.\" THE BUG THE OWNER HIT: pressing Stop on a fleet travelling to a location was refused with",
+   "seedsFlag": []
+  },
+  {
    "id": "fn:handle_new_user",
    "kind": "function",
    "label": "handle_new_user",
@@ -5470,6 +5481,13 @@
    "id": "fn:danger_zone_register_pirate_effect",
    "kind": "function",
    "label": "danger_zone_register_pirate_effect",
+   "system": null,
+   "detail": "Postgres function"
+  },
+  {
+   "id": "fn:group_sortie_is_open",
+   "kind": "function",
+   "label": "group_sortie_is_open",
    "system": null,
    "detail": "Postgres function"
   },
@@ -12819,6 +12837,11 @@
   {
    "source": "mig:20260618000304",
    "target": "fn:danger_zone_register_pirate_effect",
+   "type": "creates"
+  },
+  {
+   "source": "mig:20260618000305",
+   "target": "fn:group_sortie_is_open",
    "type": "creates"
   },
   {
@@ -20873,6 +20896,11 @@
   {
    "date": "2026-07-28",
    "title": "Ambushes work again: `0303` manifest guard + `0304` pirate-zone effect (**both DEPLOYED & verified live**)",
+   "migs": []
+  },
+  {
+   "date": "2026-07-29",
+   "title": "Stop always works: `0305` retires SEVEN copies of the sortie rule onto ONE authority",
    "migs": []
   }
  ]
