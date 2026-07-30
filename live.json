@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-07-30T05:47:10.064Z",
+ "fetchedAt": "2026-07-30T08:35:33.895Z",
  "sources": {
   "gameConfig": {
    "ok": true,
@@ -9,11 +9,11 @@
   "deploy": {
    "ok": true,
    "newest": {
-    "id": 30428482523,
+    "id": 30526214678,
     "status": "completed",
     "conclusion": "success",
     "branch": "main",
-    "createdAt": "2026-07-29T06:32:12Z"
+    "createdAt": "2026-07-30T08:19:05Z"
    }
   }
  },
@@ -71,6 +71,13 @@
  "deploy": {
   "state": "success",
   "runs": [
+   {
+    "id": 30526214678,
+    "status": "completed",
+    "conclusion": "success",
+    "branch": "main",
+    "createdAt": "2026-07-30T08:19:05Z"
+   },
    {
     "id": 30428482523,
     "status": "completed",
