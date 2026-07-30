@@ -8,7 +8,7 @@
   "systems": 30,
   "phases": 28,
   "rungs": 9,
-  "jobs": 243,
+  "jobs": 244,
   "nodes": 813,
   "edges": 2457
  },
@@ -20900,7 +20900,12 @@
   },
   {
    "date": "2026-07-29",
-   "title": "Stop always works: `0305` retires SEVEN copies of the sortie rule onto ONE authority",
+   "title": "Stop always works: `0305` retires SEVEN copies of the sortie rule onto ONE authority (**DEPLOYED & verified live**)",
+   "migs": []
+  },
+  {
+   "date": "2026-07-29",
+   "title": "Map: click a danger zone to see what it is (`#334`, **DEPLOYED**)",
    "migs": []
   }
  ]
