@@ -1,16 +1,16 @@
 {
  "generatedFrom": "repo scan (no production knowledge)",
  "counts": {
-  "migrations": 299,
-  "functions": 299,
+  "migrations": 300,
+  "functions": 302,
   "tables": 100,
   "flags": 48,
   "systems": 30,
   "phases": 28,
   "rungs": 9,
-  "jobs": 244,
-  "nodes": 813,
-  "edges": 2457
+  "jobs": 245,
+  "nodes": 817,
+  "edges": 2473
  },
  "boundariesParsed": true,
  "plansParsed": true,
@@ -3399,6 +3399,17 @@
    "seedsFlag": []
   },
   {
+   "id": "mig:20260618000306",
+   "kind": "migration",
+   "label": "empty_fleet_dock_authority",
+   "stamp": "20260618000306",
+   "seq": null,
+   "addedAt": "2026-07-30T17:19:01+09:00",
+   "file": "supabase/migrations/20260618000306_empty_fleet_dock_authority.sql",
+   "detail": "═══════════════════════════════════════════════════════════════════════════════════════════════ 0306 — A FLEET WITH NO SHIPS IS NOT A FLEET (and \"is this fleet docked?\" finally gets ONE definition) ═══════════════════════════════════════════════════════════════════════════════════════════════ THE BUG THE OWNER HIT: \"my fleet has no ship, so it has nothing, yet i can't assign ship to fleet",
+   "seedsFlag": []
+  },
+  {
    "id": "fn:handle_new_user",
    "kind": "function",
    "label": "handle_new_user",
@@ -5488,6 +5499,27 @@
    "id": "fn:group_sortie_is_open",
    "kind": "function",
    "label": "group_sortie_is_open",
+   "system": null,
+   "detail": "Postgres function"
+  },
+  {
+   "id": "fn:fleet_docked_location",
+   "kind": "function",
+   "label": "fleet_docked_location",
+   "system": null,
+   "detail": "Postgres function"
+  },
+  {
+   "id": "fn:group_fleet_retire",
+   "kind": "function",
+   "label": "group_fleet_retire",
+   "system": null,
+   "detail": "Postgres function"
+  },
+  {
+   "id": "fn:group_retire_empty_fleet",
+   "kind": "function",
+   "label": "group_retire_empty_fleet",
    "system": null,
    "detail": "Postgres function"
   },
@@ -12845,6 +12877,21 @@
    "type": "creates"
   },
   {
+   "source": "mig:20260618000306",
+   "target": "fn:fleet_docked_location",
+   "type": "creates"
+  },
+  {
+   "source": "mig:20260618000306",
+   "target": "fn:group_fleet_retire",
+   "type": "creates"
+  },
+  {
+   "source": "mig:20260618000306",
+   "target": "fn:group_retire_empty_fleet",
+   "type": "creates"
+  },
+  {
    "source": "mig:20260616000018",
    "target": "mig:20260616000008",
    "type": "supersedes",
@@ -18553,6 +18600,71 @@
    "type": "calls"
   },
   {
+   "source": "fn:fleet_docked_location",
+   "target": "table:fleets",
+   "type": "touches"
+  },
+  {
+   "source": "fn:group_fleet_retire",
+   "target": "fn:presence_complete",
+   "type": "calls"
+  },
+  {
+   "source": "fn:group_fleet_retire",
+   "target": "table:location_presence",
+   "type": "touches"
+  },
+  {
+   "source": "fn:group_fleet_retire",
+   "target": "table:fleets",
+   "type": "touches"
+  },
+  {
+   "source": "fn:group_retire_empty_fleet",
+   "target": "table:main_ship_instances",
+   "type": "touches"
+  },
+  {
+   "source": "fn:group_retire_empty_fleet",
+   "target": "fn:group_sortie_is_open",
+   "type": "calls"
+  },
+  {
+   "source": "fn:group_retire_empty_fleet",
+   "target": "fn:ship_group_resolve_fleet",
+   "type": "calls"
+  },
+  {
+   "source": "fn:group_retire_empty_fleet",
+   "target": "fn:group_fleet_retire",
+   "type": "calls"
+  },
+  {
+   "source": "fn:group_retire_empty_fleet",
+   "target": "fn:fleet_docked_location",
+   "type": "calls"
+  },
+  {
+   "source": "fn:group_retire_empty_fleet",
+   "target": "table:fleets",
+   "type": "touches"
+  },
+  {
+   "source": "fn:group_retire_empty_fleet",
+   "target": "fn:mainship_resolve_fleet",
+   "type": "calls"
+  },
+  {
+   "source": "fn:group_retire_empty_fleet",
+   "target": "fn:presence_complete",
+   "type": "calls"
+  },
+  {
+   "source": "fn:group_retire_empty_fleet",
+   "target": "table:location_presence",
+   "type": "touches"
+  },
+  {
    "source": "table:profiles",
    "target": "system:Auth",
    "type": "owned-by"
@@ -20906,6 +21018,11 @@
   {
    "date": "2026-07-29",
    "title": "Map: click a danger zone to see what it is (`#334`, **DEPLOYED**)",
+   "migs": []
+  },
+  {
+   "date": "2026-07-30",
+   "title": "A fleet with no ships is not a fleet (migration `0306`, **NOT DEPLOYED — PR open**)",
    "migs": []
   }
  ]
