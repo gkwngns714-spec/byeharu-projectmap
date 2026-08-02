@@ -1,6 +1,21 @@
 {
-  "generatedAt": "2026-08-02T16:04:04.851Z",
+  "generatedAt": "2026-08-02T17:33:45.528Z",
   "source": "open pull requests on gkwngns714-spec/byeharu",
-  "count": 0,
-  "items": []
+  "count": 1,
+  "items": [
+    {
+      "pr": 351,
+      "title": "the fleet badge stands with its ships — one fleet, one marker, moving with the formation",
+      "branch": "slice-fleet-badge-at-the-fight",
+      "stamp": null,
+      "color": "#ff2d95",
+      "touches": {
+        "functions": [],
+        "tables": []
+      },
+      "nodes": [
+        "system:Fleet"
+      ]
+    }
+  ]
 }
