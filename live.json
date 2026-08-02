@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-08-02T09:34:29.139Z",
+ "fetchedAt": "2026-08-02T11:20:03.708Z",
  "sources": {
   "gameConfig": {
    "ok": true,
@@ -9,11 +9,11 @@
   "deploy": {
    "ok": true,
    "newest": {
-    "id": 30736581609,
-    "status": "completed",
-    "conclusion": "success",
+    "id": 30743837492,
+    "status": "waiting",
+    "conclusion": "",
     "branch": "main",
-    "createdAt": "2026-08-02T06:48:12Z"
+    "createdAt": "2026-08-02T10:29:16Z"
    }
   }
  },
@@ -69,8 +69,15 @@
  },
  "configRows": 147,
  "deploy": {
-  "state": "success",
+  "state": "awaiting-approval",
   "runs": [
+   {
+    "id": 30743837492,
+    "status": "waiting",
+    "conclusion": "",
+    "branch": "main",
+    "createdAt": "2026-08-02T10:29:16Z"
+   },
    {
     "id": 30736581609,
     "status": "completed",
@@ -84,13 +91,6 @@
     "conclusion": "success",
     "branch": "main",
     "createdAt": "2026-08-02T06:48:01Z"
-   },
-   {
-    "id": 30731701891,
-    "status": "completed",
-    "conclusion": "success",
-    "branch": "main",
-    "createdAt": "2026-08-02T04:03:35Z"
    }
   ]
  }
