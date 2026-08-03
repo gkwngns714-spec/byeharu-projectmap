@@ -1,25 +1,6 @@
 {
-  "generatedAt": "2026-08-03T11:37:14.823Z",
+  "generatedAt": "2026-08-03T14:50:38.491Z",
   "source": "open pull requests on gkwngns714-spec/byeharu",
-  "count": 1,
-  "items": [
-    {
-      "pr": 374,
-      "title": "0335: one way to repair — and zero means FREE, not broken",
-      "branch": "slice-one-way-to-repair",
-      "stamp": "20260618000335",
-      "color": "#ff2d95",
-      "touches": {
-        "functions": [
-          "repair_main_ship",
-          "repair_ship_hull_at_port"
-        ],
-        "tables": []
-      },
-      "nodes": [
-        "fn:repair_main_ship",
-        "fn:repair_ship_hull_at_port"
-      ]
-    }
-  ]
+  "count": 0,
+  "items": []
 }
