@@ -1,35 +1,6 @@
 {
-  "generatedAt": "2026-08-08T14:37:24.942Z",
+  "generatedAt": "2026-08-08T15:34:51.755Z",
   "source": "open pull requests on gkwngns714-spec/byeharu",
-  "count": 2,
-  "items": [
-    {
-      "pr": 399,
-      "title": "One fleet, one shape — and a range ring that IS the fire rule",
-      "branch": "slice-one-fleet-one-shape",
-      "stamp": null,
-      "color": "#ff2d95",
-      "touches": {
-        "functions": [],
-        "tables": []
-      },
-      "nodes": [
-        "system:Fleet"
-      ]
-    },
-    {
-      "pr": 398,
-      "title": "0343 — one way to die: mint combat_encounter_wreck and fold the three fleet-death arms",
-      "branch": "slice-one-way-to-die",
-      "stamp": "20260618000343",
-      "color": "#00e5ff",
-      "touches": {
-        "functions": [],
-        "tables": []
-      },
-      "nodes": [
-        "system:Combat"
-      ]
-    }
-  ]
+  "count": 0,
+  "items": []
 }
