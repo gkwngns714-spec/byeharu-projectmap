@@ -1,25 +1,6 @@
 {
-  "generatedAt": "2026-08-09T11:34:08.488Z",
+  "generatedAt": "2026-08-09T13:01:13.085Z",
   "source": "open pull requests on gkwngns714-spec/byeharu",
-  "count": 1,
-  "items": [
-    {
-      "pr": 406,
-      "title": "0349 — a fleet comes home together: 'idle' is a live fleet, and the sortie manifest finally ends",
-      "branch": "slice-a-fleet-comes-home-together",
-      "stamp": "20260618000349",
-      "color": "#ff2d95",
-      "touches": {
-        "functions": [
-          "process_mainship_expeditions",
-          "nohome_dock_returning_ship"
-        ],
-        "tables": []
-      },
-      "nodes": [
-        "fn:process_mainship_expeditions",
-        "fn:nohome_dock_returning_ship"
-      ]
-    }
-  ]
+  "count": 0,
+  "items": []
 }

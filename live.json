@@ -1,19 +1,19 @@
 {
- "fetchedAt": "2026-08-09T11:34:04.761Z",
+ "fetchedAt": "2026-08-09T13:01:09.912Z",
  "sources": {
   "gameConfig": {
    "ok": true,
    "host": "dlkbwztrdvnnjlvaydut.supabase.co",
-   "rows": 136
+   "rows": 137
   },
   "deploy": {
    "ok": true,
    "newest": {
-    "id": 31306625731,
+    "id": 31312382596,
     "status": "completed",
     "conclusion": "success",
     "branch": "main",
-    "createdAt": "2026-08-09T09:44:19Z"
+    "createdAt": "2026-08-09T12:04:43Z"
    }
   }
  },
@@ -64,16 +64,16 @@
   "typed_zone_pirate_intercept_runtime_enabled": true,
   "phase20_polish_enabled": true
  },
- "configRows": 136,
+ "configRows": 137,
  "deploy": {
   "state": "success",
   "runs": [
    {
-    "id": 31306625731,
+    "id": 31312382596,
     "status": "completed",
     "conclusion": "success",
     "branch": "main",
-    "createdAt": "2026-08-09T09:44:19Z"
+    "createdAt": "2026-08-09T12:04:43Z"
    }
   ]
  }
