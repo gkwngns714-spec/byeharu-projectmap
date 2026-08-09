@@ -1,21 +1,6 @@
 {
-  "generatedAt": "2026-08-09T14:07:46.733Z",
+  "generatedAt": "2026-08-09T15:02:19.631Z",
   "source": "open pull requests on gkwngns714-spec/byeharu",
-  "count": 1,
-  "items": [
-    {
-      "pr": 408,
-      "title": "0350 — the WAVE itself grows: every third wave brings one more ship, not just more room",
-      "branch": "slice-the-wave-itself-grows",
-      "stamp": "20260618000350",
-      "color": "#ff2d95",
-      "touches": {
-        "functions": [],
-        "tables": []
-      },
-      "nodes": [
-        "system:Mining"
-      ]
-    }
-  ]
+  "count": 0,
+  "items": []
 }
