@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-09T16:48:25.510Z",
+  "generatedAt": "2026-08-09T17:35:26.925Z",
   "source": "open pull requests on gkwngns714-spec/byeharu",
-  "count": 2,
+  "count": 1,
   "items": [
     {
       "pr": 411,
@@ -22,20 +22,6 @@
         "fn:nohome_dock_returning_ship",
         "table:bases",
         "table:fleets"
-      ]
-    },
-    {
-      "pr": 410,
-      "title": "0351 — the fleet fires as one, the circle is the rule, and the attack interval is 5 seconds",
-      "branch": "slice-the-fight-you-can-follow",
-      "stamp": "20260618000351",
-      "color": "#00e5ff",
-      "touches": {
-        "functions": [],
-        "tables": []
-      },
-      "nodes": [
-        "system:Fleet"
       ]
     }
   ]
