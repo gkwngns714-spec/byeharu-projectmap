@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-08-11T16:25:23.331Z",
+ "fetchedAt": "2026-08-11T17:30:12.317Z",
  "sources": {
   "gameConfig": {
    "ok": true,
@@ -7,14 +7,8 @@
    "rows": 137
   },
   "deploy": {
-   "ok": true,
-   "newest": {
-    "id": 31326599709,
-    "status": "completed",
-    "conclusion": "success",
-    "branch": "main",
-    "createdAt": "2026-08-09T17:30:56Z"
-   }
+   "ok": false,
+   "reason": "gh CLI unavailable or not authenticated"
   }
  },
  "flags": {
@@ -66,15 +60,7 @@
  },
  "configRows": 137,
  "deploy": {
-  "state": "success",
-  "runs": [
-   {
-    "id": 31326599709,
-    "status": "completed",
-    "conclusion": "success",
-    "branch": "main",
-    "createdAt": "2026-08-09T17:30:56Z"
-   }
-  ]
+  "state": "unknown",
+  "runs": []
  }
 }
