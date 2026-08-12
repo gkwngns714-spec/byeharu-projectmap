@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-08-12T13:20:31.544Z",
+ "fetchedAt": "2026-08-12T14:37:52.323Z",
  "sources": {
   "gameConfig": {
    "ok": true,
@@ -37,10 +37,10 @@
   "repair_economy_enabled": true,
   "module_range_attributes_enabled": true,
   "per_ship_targeting_enabled": true,
-  "pirate_intercept_enabled": true,
   "port_shop_enabled": true,
   "combat_telegraph_enabled": true,
   "spatial_combat_enabled": true,
+  "pirate_intercept_enabled": false,
   "dev_zone_editor_enabled": true,
   "enemy_content_registry_enabled": true,
   "encounter_authoring_enabled": true,
