@@ -1,9 +1,9 @@
 {
- "fetchedAt": "2026-10-28T13:24:39.390Z",
+ "fetchedAt": "2026-10-28T19:00:57.304Z",
  "sources": {
   "gameConfig": {
    "ok": false,
-   "reason": "HTTP 402"
+   "reason": "fetch failed"
   },
   "deploy": {
    "ok": true,
